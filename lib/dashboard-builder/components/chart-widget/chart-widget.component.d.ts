@@ -1,0 +1,31 @@
+import { OnInit, OnDestroy } from '@angular/core';
+import { LayoutService } from '../../../service/layout.service';
+import { WidgetConfig } from '../../models/widget.config';
+import { DataService } from '../../services/data.service';
+import * as i0 from "@angular/core";
+export declare class ChartWidgetComponent implements OnInit, OnDestroy {
+    widgetConfig: WidgetConfig;
+    chartHeight: number;
+    layoutService: LayoutService;
+    dataService: DataService;
+    chartData: any;
+    chartOptions: any;
+    chartType: 'line' | 'bar' | 'pie' | 'doughnut' | 'polarArea' | 'radar';
+    private rawData;
+    private subscription?;
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    private initializeChart;
+    private updateTheme;
+    private loadData;
+    private processDataForChart;
+    private updateChartOptions;
+    private addAppetiteBands;
+    private getChartType;
+    private hexToRgba;
+    onConfigure(): void;
+    onDuplicate(): void;
+    onDelete(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChartWidgetComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChartWidgetComponent, "app-chart-widget", never, { "widgetConfig": { "alias": "widgetConfig"; "required": false; }; "chartHeight": { "alias": "chartHeight"; "required": false; }; }, {}, never, never, true, never>;
+}

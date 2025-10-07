@@ -1,0 +1,32 @@
+import { OnInit, OnDestroy } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class DashboardBuilderComponent implements OnInit, OnDestroy {
+    private dashboardService;
+    private widgetService;
+    mode: 'prebuilt' | 'builder' | 'library';
+    leftPanelOpen: boolean;
+    isConfiguring: boolean;
+    showAddWidget: boolean;
+    showSaveTemplate: boolean;
+    searchQuery: string;
+    filteredTemplates: import("dashboard-library").PrebuiltTemplate[];
+    templateName: string;
+    templateDescription: string;
+    templateTags: string;
+    private subscriptions;
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    onModeChange(mode: 'prebuilt' | 'builder' | 'library'): void;
+    onSearchChange(): void;
+    onApplyTemplate(template: any, event?: Event): void;
+    onShare(): void;
+    onExport(): void;
+    onSaveTemplate(): void;
+    onCancelSaveTemplate(): void;
+    onConfirmSaveTemplate(): void;
+    onToggleFilters(): void;
+    getCenterContentClasses(): string;
+    trackByTemplateId(index: number, template: any): string;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DashboardBuilderComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DashboardBuilderComponent, "app-dashboard-builder", never, {}, {}, never, never, true, never>;
+}
